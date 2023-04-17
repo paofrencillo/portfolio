@@ -1,0 +1,127 @@
+@font-face {
+  font-family: sans-serif;
+  src: url('assets/fonts/VarelaRound-Regular.ttf"');
+}
+
+$color-shark: #181e20;
+$color-greenvague: #02314d;
+$color-bahamablue: #045c94;
+$color-cyan: #00ffff;
+$color-mygin: #ffbb1c;
+$color-porselain: #f2f4f5;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 15vw;
+  background-color: $color-shark;
+}
+
+.Navbar-brand {
+  cursor: pointer;
+}
+
+.Navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar-links a {
+  display: grid;
+  place-items: center;
+  margin: 5px;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $color-porselain;
+
+  &:hover {
+    color: $color-cyan;
+  }
+}
+
+.Navbar-brand > img {
+  width: 40px;
+  height: 40px;
+}
+
+.active {
+  background-color: $color-cyan;
+  border-radius: 50%;
+
+  &:hover {
+    color: $color-porselain !important;
+  }
+}
+
+.Navbar-cv > button {
+  background-color: transparent;
+  border: 2px solid $color-cyan;
+  color: $color-porselain;
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  &:hover {
+    border-color: $color-mygin;
+  }
+}
+
+.Hero,
+.About,
+.Projects,
+.Contact {
+  min-height: 100vh;
+  background-color: $color-shark;
+}
+
+.Hero {
+  display: grid;
+  place-items: center;
+}
+
+.Hero-me {
+  text-align: center;
+  font-size: calc(10px + 5vw - 2px);
+  font-weight: 800;
+  color: $color-porselain;
+}
+
+.Hero-name {
+  color: $color-mygin;
+}
+
+.Hero-desc {
+  text-align: center;
+  font-size: calc(7px + 1vw - 2px);
+  padding: 1.5rem 15vw;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.Hero-profiles {
+  font-size: 24px;
+  color: $color-cyan;
+}
+
+.Hero-profiles > i {
+  padding: 2rem 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-mygin;
+  }
+}

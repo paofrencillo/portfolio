@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="/assets/fontawesome-free-6.4.0-web/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/fontawesome-free-6.4.0-web/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/fontawesome-free-6.4.0-web/css/solid.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="Navbar">
+      <div class="Navbar-brand">
+        <img src="res/paolo-logo.png" alt="logo" />
+      </div>
+      <div class="Navbar-links">
+        <a
+          href="#home"
+          class="active"
+          onmouseenter="fadeIn(this);"
+          onmouseleave="fadeOut(this);"
+        >
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a
+          href="#about"
+          onmouseenter="fadeIn(this);"
+          onmouseleave="fadeOut(this);"
+        >
+          <i class="fa-solid fa-info"></i>
+        </a>
+        <a
+          href="#projects"
+          onmouseenter="fadeIn(this);"
+          onmouseleave="fadeOut(this);"
+        >
+          <i class="fa-solid fa-rocket"></i>
+        </a>
+        <a
+          href="#contact"
+          onmouseenter="fadeIn(this);"
+          onmouseleave="fadeOut(this);"
+        >
+          <i class="fa-solid fa-message"></i>
+        </a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="Navbar-cv">
+        <button class="Cv" id="cv">Download CV</button>
+      </div>
+    </nav>
+    <section class="Hero" id="hero">
+      <div class="Hero-me">
+        <div>I'm <span class="Hero-name">Paolo Frencillo</span></div>
+        <div class="Hero-desc">
+          A Pythonista, web developer, and tech enthusiast who loves crafting
+          innovative web solutions with clean code and cutting-edge
+          technologies.
+        </div>
+        <div class="Hero-profiles">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </section>
+    <section class="About" id="about"></section>
+    <section class="Projects" id="projects"></section>
+    <section class="Contact" id="contact"></section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+@font-face {
+  font-family: sans-serif;
+  src: url('assets/fonts/VarelaRound-Regular.ttf"');
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 15vw;
+  background-color: #181e20;
+}
+
+.Navbar-brand {
+  cursor: pointer;
+}
+
+.Navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar-links a {
+  display: grid;
+  place-items: center;
+  margin: 5px;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f2f4f5;
+}
+.Navbar-links a:hover {
+  color: #00ffff;
+}
+
+.Navbar-brand > img {
+  width: 40px;
+  height: 40px;
+}
+
+.active {
+  background-color: #00ffff;
+  border-radius: 50%;
+}
+.active:hover {
+  color: #f2f4f5 !important;
+}
+
+.Navbar-cv > button {
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #f2f4f5;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+.Navbar-cv > button:hover {
+  border-color: #ffbb1c;
+}
+
+.Hero,
+.About,
+.Projects,
+.Contact {
+  min-height: 100vh;
+  background-color: #181e20;
+}
+
+.Hero {
+  display: grid;
+  place-items: center;
+}
+
+.Hero-me {
+  text-align: center;
+  font-size: calc(10px + 5vw - 2px);
+  font-weight: 800;
+  color: #f2f4f5;
+}
+
+.Hero-name {
+  color: #ffbb1c;
+}
+
+.Hero-desc {
+  text-align: center;
+  font-size: calc(7px + 1vw - 2px);
+  padding: 1.5rem 15vw;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.Hero-profiles {
+  font-size: 24px;
+  color: #00ffff;
+}
+
+.Hero-profiles > i {
+  padding: 2rem 0.5rem;
+  cursor: pointer;
+}
+.Hero-profiles > i:hover {
+  color: #ffbb1c;
+}/*# sourceMappingURL=style.css.map */
