@@ -1,23 +1,25 @@
-@font-face {
-  font-family: sans-serif;
-  src: url('assets/fonts/VarelaRound-Regular.ttf"');
-}
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 $color-shark: #181e20;
 $color-greenvague: #02314d;
 $color-bahamablue: #045c94;
 $color-cyan: #00ffff;
 $color-mygin: #ffbb1c;
-$color-porselain: #f2f4f5;
+$color-porselain: #f2f2f2;
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .Navbar {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
@@ -25,45 +27,45 @@ $color-porselain: #f2f4f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 15vw;
-  background-color: $color-shark;
+  padding: 1rem 10vw;
 }
 
 .Navbar-brand {
   cursor: pointer;
+
+  > img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .Navbar-links {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.Navbar-links a {
-  display: grid;
-  place-items: center;
-  margin: 5px;
-  padding: 14px;
-  text-decoration: none;
-  font-size: 20px;
-  color: $color-porselain;
+  > a {
+    display: grid;
+    place-items: center;
+    margin: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: calc(7px + 1vw - 2px);
+    color: $color-porselain;
 
-  &:hover {
-    color: $color-cyan;
+    &:hover {
+      color: $color-cyan;
+    }
   }
 }
 
-.Navbar-brand > img {
-  width: 40px;
-  height: 40px;
-}
-
 .active {
-  background-color: $color-cyan;
-  border-radius: 50%;
+  border-bottom: 3px solid $color-cyan;
+  border-radius: 10px;
+  color: $color-cyan !important;
 
   &:hover {
-    color: $color-porselain !important;
+    color: $color-cyan !important;
   }
 }
 
@@ -73,6 +75,7 @@ $color-porselain: #f2f4f5;
   color: $color-porselain;
   padding: 10px 14px;
   border-radius: 10px;
+  font-size: calc(7px + 1vw - 2px);
 
   &:hover {
     border-color: $color-mygin;
@@ -84,19 +87,40 @@ $color-porselain: #f2f4f5;
 .Projects,
 .Contact {
   min-height: 100vh;
-  background-color: $color-shark;
 }
 
-.Hero {
-  display: grid;
-  place-items: center;
+.Hero-img {
+  background-image: url("../res/pao.jpg");
+  background-position: center -325px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  filter: blur(2px);
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    background-position: center center;
+  }
 }
 
 .Hero-me {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
   font-size: calc(10px + 5vw - 2px);
-  font-weight: 800;
+  font-weight: 700;
   color: $color-porselain;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+  min-height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
 }
 
 .Hero-name {
@@ -105,23 +129,70 @@ $color-porselain: #f2f4f5;
 
 .Hero-desc {
   text-align: center;
-  font-size: calc(7px + 1vw - 2px);
+  font-size: calc(12px + 1vw - 2px);
+  font-weight: 400;
   padding: 1.5rem 15vw;
-  opacity: 0.8;
+  opacity: 0.9;
   letter-spacing: 1px;
   line-height: 30px;
 }
 
-.Hero-profiles {
-  font-size: 24px;
-  color: $color-cyan;
+.Hero-connect {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 3rem;
+  column-gap: 2.5rem;
+  padding: 0.5rem 15vw;
 }
 
-.Hero-profiles > i {
-  padding: 2rem 0.5rem;
-  cursor: pointer;
+.Hero-cv {
+  display: grid;
+  place-items: center;
 
-  &:hover {
-    color: $color-mygin;
+  > button {
+    background-color: transparent;
+    border: 2px solid $color-mygin;
+    color: $color-porselain;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: calc(7px + 1vw - 2px);
+
+    &:hover {
+      border-color: $color-cyan;
+    }
   }
+}
+
+.Hero-profiles {
+  font-size: 30px;
+
+  > a {
+    color: $color-cyan;
+    padding: 1rem 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-mygin;
+    }
+  }
+}
+
+.Down-btn {
+  color: $color-mygin;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  font-size: calc(10px + 2vw - 1px);
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.About {
+  background-color: $color-shark;
 }
