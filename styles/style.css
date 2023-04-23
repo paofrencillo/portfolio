@@ -178,7 +178,10 @@ html {
   cursor: pointer;
   z-index: 50;
 }
-.Down-btn > a:focus {
+.Down-btn > a,
+.Down-btn a:hover,
+.Down-btn a:focus,
+.Down-btn a:active {
   color: #ffbb1c;
 }
 
