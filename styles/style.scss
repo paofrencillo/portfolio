@@ -24,10 +24,11 @@ html {
   left: 0;
   right: 0;
   background-color: transparent;
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10vw;
+  padding: 0.75rem 15vw;
 }
 
 .Navbar-brand {
@@ -82,14 +83,14 @@ html {
   }
 }
 
-.Hero,
-.About,
+.Home,
 .Projects,
 .Contact {
+  position: relative;
   min-height: 100vh;
 }
 
-.Hero-img {
+.Home-img {
   background-image: url("../res/pao.jpg");
   background-position: center -325px;
   background-size: cover;
@@ -103,7 +104,7 @@ html {
   }
 }
 
-.Hero-me {
+.Home-me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,21 +124,21 @@ html {
   background-color: rgba($color: #000000, $alpha: 0.4);
 }
 
-.Hero-name {
+.Home-name {
   color: $color-mygin;
 }
 
-.Hero-desc {
+.Home-desc {
   text-align: center;
   font-size: calc(12px + 1vw - 2px);
   font-weight: 400;
-  padding: 1.5rem 15vw;
+  padding: 1.5rem 16vw;
   opacity: 0.9;
   letter-spacing: 1px;
   line-height: 30px;
 }
 
-.Hero-connect {
+.Home-connect {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -147,7 +148,7 @@ html {
   padding: 0.5rem 15vw;
 }
 
-.Hero-cv {
+.Home-cv {
   display: grid;
   place-items: center;
 
@@ -165,7 +166,7 @@ html {
   }
 }
 
-.Hero-profiles {
+.Home-profiles {
   font-size: 30px;
 
   > a {
@@ -190,9 +191,213 @@ html {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 100;
+  z-index: 50;
+
+  > a:focus {
+    color: $color-mygin;
+  }
 }
 
 .About {
   background-color: $color-shark;
+  padding: 5rem 15vw;
+}
+
+.Header {
+  color: $color-porselain;
+  font-weight: 400;
+}
+
+.Gold-underline {
+  border-bottom: 4px solid $color-mygin;
+}
+
+.Personality {
+  font-size: calc(8px + 2vw - 1px);
+}
+
+.Personality > span:nth-child(1),
+.Personality > span:nth-child(3) {
+  color: $color-porselain;
+  font-weight: 700;
+}
+
+.Personality > span:nth-child(2) {
+  color: $color-mygin;
+  font-weight: 700;
+}
+
+.About-me {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  column-gap: 5rem;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+}
+
+.About-desc {
+  margin-top: 25px;
+  color: $color-porselain;
+  font-size: calc(5px + 1vw - 1px);
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.My-image {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(120deg, $color-shark, $color-mygin) border-box;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+
+  > img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: grayscale(50);
+  }
+}
+
+.Skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 100px;
+}
+
+.FOE,
+.Educ-exp {
+  margin: 150px auto 75px auto;
+  color: $color-porselain;
+  font-weight: 700;
+  font-size: calc(6px + 2vw - 1px);
+  display: grid;
+  place-items: center;
+
+  > p {
+    width: max-content;
+    border-bottom: 5px solid $color-cyan;
+  }
+}
+
+.Languages,
+.Frameworks {
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+
+.Rotate {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border: 5px solid $color-mygin;
+}
+
+.AOE {
+  position: absolute;
+  color: $color-porselain;
+  font-weight: 700;
+  font-size: calc(8px + 1vw - 1px);
+  text-align: center;
+}
+
+.Rotate-img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+
+  > img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+#lang-img1 {
+  top: -40px;
+  left: 110px;
+}
+
+#lang-img2 {
+  top: 50px;
+  left: 250px;
+}
+
+#lang-img3 {
+  top: 180px;
+  left: 240px;
+}
+
+#lang-img4 {
+  bottom: -40px;
+  right: 110px;
+}
+
+#lang-img5 {
+  top: 180px;
+  right: 240px;
+}
+
+#lang-img6 {
+  top: 50px;
+  right: 250px;
+}
+
+#fw-img1 {
+  top: -40px;
+  left: 110px;
+}
+
+#fw-img2 {
+  top: 120px;
+  right: -40px;
+}
+
+#fw-img3 {
+  bottom: -40px;
+  right: 110px;
+}
+
+#fw-img4 {
+  top: 120px;
+  left: -40px;
+}
+
+.Educ-exp {
+  margin-bottom: 50px !important;
+}
+
+.Educ-exp-options {
+  display: grid;
+  place-items: center;
+  color: $color-porselain;
+
+  > .Eeo-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 15px;
+    border: 3px solid $color-mygin;
+
+    > div {
+      cursor: pointer;
+      padding: 5px 30px;
+    }
+
+    > .selected {
+      border-radius: 10px;
+      background-color: $color-mygin;
+    }
+  }
 }
