@@ -11,6 +11,6 @@ $window.scroll(function () {
 });
 
 function changeOption(div) {
-  $(".Eeo-inner").children().removeClass("selected");
+  $(".Eeo__inner").children().removeClass("selected");
   $(div).first().addClass("selected");
 }

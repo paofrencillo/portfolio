@@ -31,7 +31,7 @@ html {
   padding: 0.75rem 15vw;
 }
 
-.Navbar-brand {
+.Navbar__brand {
   cursor: pointer;
 
   > img {
@@ -40,7 +40,7 @@ html {
   }
 }
 
-.Navbar-links {
+.Navbar__links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ html {
   }
 }
 
-.Navbar-cv > button {
+.Navbar__cv > button {
   background-color: transparent;
   border: 2px solid $color-cyan;
   color: $color-porselain;
@@ -90,7 +90,7 @@ html {
   min-height: 100vh;
 }
 
-.Home-img {
+.Home__img {
   background-image: url("../res/pao.jpg");
   background-position: center -325px;
   background-size: cover;
@@ -104,7 +104,7 @@ html {
   }
 }
 
-.Home-me {
+.Home__me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,11 +124,11 @@ html {
   background-color: rgba($color: #000000, $alpha: 0.4);
 }
 
-.Home-name {
+.Home__name {
   color: $color-mygin;
 }
 
-.Home-desc {
+.Home__desc {
   text-align: center;
   font-size: calc(12px + 1vw - 2px);
   font-weight: 400;
@@ -138,7 +138,7 @@ html {
   line-height: 30px;
 }
 
-.Home-connect {
+.Home__connect {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -148,7 +148,7 @@ html {
   padding: 0.5rem 15vw;
 }
 
-.Home-cv {
+.Home__cv {
   display: grid;
   place-items: center;
 
@@ -166,13 +166,11 @@ html {
   }
 }
 
-.Home-profiles {
-  font-size: 30px;
+.Home__profiles {
+  font-size: calc(10px + 2vw - 2px);
 
   > a {
     color: $color-cyan;
-    padding: 1rem 0.25rem;
-    cursor: pointer;
 
     &:hover {
       color: $color-mygin;
@@ -180,7 +178,7 @@ html {
   }
 }
 
-.Down-btn {
+.Down__btn {
   color: $color-mygin;
   position: absolute;
   bottom: 20px;
@@ -211,7 +209,7 @@ html {
   font-weight: 400;
 }
 
-.Gold-underline {
+.Gold__underline {
   border-bottom: 4px solid $color-mygin;
 }
 
@@ -230,7 +228,7 @@ html {
   font-weight: 700;
 }
 
-.About-me {
+.About__me {
   margin-top: 25px;
   display: flex;
   justify-content: center;
@@ -242,7 +240,7 @@ html {
   }
 }
 
-.About-desc {
+.About__desc {
   margin-top: 25px;
   color: $color-porselain;
   font-size: calc(5px + 1vw - 1px);
@@ -251,7 +249,7 @@ html {
   line-height: 30px;
 }
 
-.My-image {
+.My__image {
   background: linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(120deg, $color-shark, $color-mygin) border-box;
   border: 5px solid transparent;
@@ -268,27 +266,30 @@ html {
   }
 }
 
-.Skills {
+.FOE {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.FOE__contents {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  column-gap: 100px;
   row-gap: 100px;
 }
 
-.FOE,
-.Educ-exp {
-  margin: 150px auto 75px auto;
+.FOE__title,
+.Educ__exp__title {
+  margin: 125px auto 75px auto;
   color: $color-porselain;
   font-weight: 700;
   font-size: calc(6px + 2vw - 1px);
   display: grid;
   place-items: center;
-
-  > p {
-    width: max-content;
-    border-bottom: 5px solid $color-cyan;
-  }
+  width: max-content;
+  border-bottom: 5px solid $color-cyan;
 }
 
 .Languages,
@@ -315,7 +316,7 @@ html {
   text-align: center;
 }
 
-.Rotate-img {
+.Rotate__img {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -376,16 +377,16 @@ html {
   left: -40px;
 }
 
-.Educ-exp {
-  margin-bottom: 50px !important;
+.Educ__exp__title {
+  margin-bottom: 25px !important;
 }
 
-.Educ-exp-options {
+.Educ__exp__options {
   display: grid;
   place-items: center;
   color: $color-porselain;
 
-  > .Eeo-inner {
+  > .Eeo__inner {
     display: flex;
     justify-content: center;
     align-items: center;
