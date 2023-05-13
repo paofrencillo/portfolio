@@ -4,178 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./res/paolo-logo.png" />
-    <title>Paolo Frencillo</title>
-    <link
-      href="/assets/fontawesome-free-6.4.0-web/css/fontawesome.css"
-      rel="stylesheet"
-    />
-    <link
-      href="/assets/fontawesome-free-6.4.0-web/css/brands.css"
-      rel="stylesheet"
-    />
-    <link
-      href="/assets/fontawesome-free-6.4.0-web/css/solid.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="Navbar">
-      <div class="Navbar__brand">
-        <img src="res/paolo-logo.png" alt="logo" />
+    <nav class="navbar">
+      <div class="navbar__brand">PMF</div>
+      <div class="navbar__links__wrapper">
+        <a class="navbar__links">About</a>
+        <a class="navbar__links">Services</a>
+        <a class="navbar__links">Projects</a>
+        <a class="navbar__links">Contact</a>
       </div>
-      <div class="Navbar__links">
-        <a class="active" href="#home" target="_blank">Home</a>
-        <a href="#about target="_blank"">About</a>
-        <a href="" target="_blank">Projects</a>
-        <a href="" target="_blank">Contact</a>
-      </div>
-      <div class="Navbar__cv">
-        <button class="Cv" id="cv">Download CV</button>
-      </div>
+
+      <button type="button" class="navbar__cv">Resume</button>
     </nav>
     <main>
-      <section class="Home" id="home">
-        <div class="Home__img"></div>
-        <div class="Home__me">
-          <div>I'm <span class="Home__name">Paolo Frencillo</span></div>
-          <div class="Home__desc">
-            A web developer and tech enthusiast who loves crafting innovative
-            web solutions with clean code and cutting-edge technologies.
-          </div>
-          <div class="Home__connect">
-            <div class="Home__cv">
-              <button class="Cv" id="cv">Download CV</button>
-            </div>
-            <div class="Home__profiles">
-              <a href="https://www.linkedin.com/in/paofrencillo/"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-              <a href="https://github.com/paopaolopaoloo"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="https://www.facebook.com/paopaolopaoloo/"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-              <a href="https://www.instagram.com/paopaolopaoloo/"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </div>
-          </div>
+      <section class="hero">
+        <div class="my__image">
+          <img src="./assets/pao-formal-cropped.png" alt="myimage" />
         </div>
-        <button class="Down__btn">
-          <a href="#about"><i class="fa-solid fa-angle-down fa-beat"></i></a>
-        </button>
+        <div class="my__name"><span>Paolo</span>&nbsp;Frencillo</div>
+        <div class="my__exp">Full Stack Web Developer / Data Analyst</div>
       </section>
-      <section class="About" id="about">
-        <div class="Header">
-          <p><span class="Gold__underline">About</span>&nbsp;Me</p>
-        </div>
-        <div class="About__me">
-          <div class="About__summary">
-            <div class="Personality">
-              <span>Eager.</span>
-              <span>Focused.</span>
-              <span>Dedicated.</span>
-            </div>
-            <div class="About__desc">
-              I'm now pursuing a bachelor's degree in Computer Engineering
-              Technology at Technological University of the Philippines -
-              Cavite. I am a quick learner and flexible. For my own personal
-              development, I am constantly keen to learn new things and strive
-              not to always stick to my comfort zone. I love everything about
-              computer and eager to learn its different fields and functions.
-              One day, I hope to demonstrate my expertise in designing and
-              developing software systems and producing data visualization. The
-              study of data science is something else I wish to explore.
-            </div>
-          </div>
-          <div class="My__image">
-            <img src="../res/pao-formal.jpg" alt="" />
-          </div>
-        </div>
-        <div class="FOE">
-          <div class="FOE__title">Field of Expertise</div>
-          <div class="FOE__contents">
-            <div class="Languages">
-              <div class="AOE">Programming<br />Languages</div>
-              <div class="Rotate" id="rotate1">
-                <div id="lang-img1" class="Rotate__img">
-                  <img src="../res/python.png" alt="" />
-                </div>
-                <div id="lang-img2" class="Rotate__img">
-                  <img src="../res/php-logo.png" alt="" />
-                </div>
-                <div id="lang-img3" class="Rotate__img">
-                  <img src="../res/js-logo.png" alt="" />
-                </div>
-                <div id="lang-img4" class="Rotate__img">
-                  <img src="../res/html.png" alt="" />
-                </div>
-                <div id="lang-img5" class="Rotate__img">
-                  <img src="../res/css.jpg" alt="" />
-                </div>
-                <div id="lang-img6" class="Rotate__img">
-                  <img src="../res/mysql.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="Frameworks">
-              <div class="AOE">Frameworks</div>
-              <div class="Rotate" id="rotate2">
-                <div id="fw-img1" class="Rotate__img">
-                  <img src="../res/django-logo.png" alt="" />
-                </div>
-                <div id="fw-img2" class="Rotate__img">
-                  <img src="../res/jquery.png" alt="" />
-                </div>
-                <div id="fw-img3" class="Rotate__img">
-                  <img src="../res/nextjs-logo.png" alt="" />
-                </div>
-                <div id="fw-img4" class="Rotate__img">
-                  <img src="../res/bootstrap-logo.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Educ__exp">
-          <div class="Educ__exp__title">Education and Experience</div>
-          <div class="Educ__exp__options">
-            <div class="Eeo__inner">
-              <div class="selected" onclick="changeOption(this)">
-                <p>EDUCATION</p>
-              </div>
-              <div onclick="changeOption(this)">
-                <p>EXPERIENCE</p>
-              </div>
-            </div>
-          </div>
-          <div class="Educ__wrapper">
-            <div class="Educ__exp__box">
-              
-            </div>
-          </div>
-          <div class="Exp__wrapper">
-
-          </div>
-        </div>
-
-
-      </section>
-      <section class="Projects" id="projects"></section>
-      <section class="Contact" id="contact"></section>
+      <section></section>
+      <section></section>
+      <section></section>
     </main>
-
-    <script src="./assets/jquery-3.6.4/jquery-3.6.4.js"></script>
-    <script src="./spin.js"></script>
-    <script src="./app.js"></script>
   </body>
 </html>
-
-<!-- MGA GAGAWIN -->
-<!-- (1) DISPLAY THE EDUCATION AND EXPERIENCE -->
-<!-- (2) PAG HINOVER/CLICK YUNG SPIN MAG CHACHANGE INTO PROGRESS BAR NG MGA NAKALAGAY DUN -->
-<!-- (3) PROJECTS ILAGAY (NAKADOWNLOAD NA YUNG MGA MOBILE APPS NA MIT) -->
