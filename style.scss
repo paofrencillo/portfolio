@@ -94,7 +94,7 @@ html {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 5px solid $color-bahamablue;
+  border: 5px solid $color-greenvague;
 
   > img {
     width: 100%;
@@ -126,4 +126,107 @@ html {
   font-size: 20px;
   font-weight: 600;
   color: $color-porselain;
+}
+
+.projects__profile__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 30px;
+  margin: 40px auto;
+}
+
+.my__projects {
+  border: 3px solid #e0e0e0;
+  color: $color-porselain;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 7px 15px;
+  background-color: transparent;
+  box-shadow: 7px 6px 13px -5px rgba(0, 0, 0, 0.78);
+  -webkit-box-shadow: 7px 6px 13px -5px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 7px 6px 13px -5px rgba(0, 0, 0, 0.78);
+
+  &:hover {
+    background-color: $color-mygin;
+    border-color: $color-mygin;
+    color: $color-porselain;
+  }
+}
+
+.profile__links {
+  font-size: 20px;
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  > a {
+    color: $color-porselain;
+
+    &:hover {
+      color: $color-mygin;
+    }
+  }
+}
+
+.about {
+  background-color: $color-shark;
+  padding: 5rem 7vw;
+}
+
+.header {
+  color: $color-porselain;
+}
+
+.gold__underline {
+  border-bottom: 4px solid $color-mygin;
+}
+
+.about__wrapper1 {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 70px;
+  row-gap: 20px;
+}
+
+.about__desc {
+  margin: 0.5rem 0;
+  color: $color-porselain;
+  font-size: calc(6px + 1vw - 1px);
+  text-align: justify;
+  line-height: 35px;
+
+  > span {
+    font-weight: 700;
+    color: #ffbb1c;
+  }
+}
+
+.about__img {
+  margin: 0.5rem 0;
+  border: 5px solid $color-mygin;
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  box-shadow: 3px 3px 7px 0px #9b7316;
+  -webkit-box-shadow: 3px 3px 7px 0px #9b7316;
+  -moz-box-shadow: 3px 3px 7px 0px #9b7316;
+
+  > img {
+    border-radius: 15px;
+    height: 300px;
+    width: 300px;
+    object-fit: fill;
+  }
+
+  &:hover {
+    border-color: $color-greenvague;
+    box-shadow: 3px 3px 7px 0px #031c2b;
+    -webkit-box-shadow: 3px 3px 7px 0px #031c2b;
+    -moz-box-shadow: 3px 3px 7px 0px #031c2b;
+  }
 }
