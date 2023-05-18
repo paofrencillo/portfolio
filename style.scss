@@ -173,7 +173,7 @@ html {
 
 .about {
   background-color: $color-shark;
-  padding: 5rem 7vw;
+  padding: 5rem 7vw 2rem 7vw;
 }
 
 .header {
@@ -229,4 +229,66 @@ html {
     -webkit-box-shadow: 3px 3px 7px 0px #031c2b;
     -moz-box-shadow: 3px 3px 7px 0px #031c2b;
   }
+}
+
+.services {
+  background-color: $color-shark;
+  padding: 1rem 7vw;
+}
+
+.services__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // row-gap: 20px;
+  // column-gap: 20px;
+}
+
+.web__dev,
+.data__vis {
+  margin: 40px auto;
+  padding: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(228, 228, 228, 0.3);
+  border-radius: 15px;
+  width: 40%;
+  display: grid;
+  place-items: center;
+  align-content: start;
+}
+
+.web__dev__text,
+.data__vis__text {
+  font-size: calc(10px + 2vw - 1px);
+  color: $color-porselain;
+  font-weight: 700;
+  margin: 20px auto;
+}
+
+.fa-code,
+.fa-magnifying-glass-chart {
+  font-size: 40px;
+  color: $color-mygin;
+}
+
+.services__skills__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  > i {
+    color: $color-porselain;
+    font-size: 25px;
+  }
+}
+
+.view__more__btn {
+  margin: 40px auto auto auto;
+  border: 1px solid $color-cyan;
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: calc(2px + 1vw - 2px);
+  font-weight: 500;
+  background-color: $color-cyan;
 }
