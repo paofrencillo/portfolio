@@ -4,14 +4,12 @@ import ProfileLinks from "./ProfileLinks";
 import ProjectsBtn from "./ProjectsBtn";
 import ResumeBtn from "./ResumeBtn";
 
-export default function HeroSection() {
+export default function HeroSec() {
   return (
-    <div className="py-20 min-h-[100vh] bg-center flex flex-wrap justify-center items-center gap-20 px-[12vw] md:px-[16vw] relative">
-      <div className="">
-        <Avatar />
-      </div>
+    <div className="py-20 min-h-[100vh] flex flex-wrap justify-center items-center gap-20 px-[12vw] md:px-[16vw] relative">
+      <Avatar />
       <div>
-        <div className="">
+        <div>
           <Profile />
           <ProfileLinks />
         </div>

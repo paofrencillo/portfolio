@@ -1,23 +1,28 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function Links() {
   const links = [
     {
       id: 1,
-      link: "Home",
+      linkName: "Home",
+      link: "/",
     },
     {
       id: 2,
-      link: "About",
+      linkName: "About",
+      link: "/about",
     },
     {
       id: 3,
-      link: "Projects",
+      linkName: "Projects",
+      link: "/projects",
     },
     {
       id: 4,
-      link: "Contact",
+      linkName: "Contact",
+      link: "/contact",
     },
   ];
 
@@ -37,19 +42,21 @@ export default function Links() {
   return (
     <div>
       {/* navbar */}
-      <ul className="hidden md:flex justify-end items-center gap-10">
+      <div className="hidden md:flex justify-end items-center gap-10">
         {links.map(function (link) {
           return (
-            <li
-              key={link.id}
-              className="group cursor-pointer border-transparent text-sm "
-            >
-              {link.link}
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-cyan-500"></span>
-            </li>
+            <div key={link.id}>
+              <NavLink
+                to={link.link}
+                className="group cursor-pointer border-transparent text-sm"
+              >
+                {link.linkName}
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-cyan-500"></span>
+              </NavLink>
+            </div>
           );
         })}
-      </ul>
+      </div>
 
       <div
         onClick={() => setNav(!nav)}
@@ -65,18 +72,20 @@ export default function Links() {
       {/* navbar responsive */}
       {/* if nav responsive is true and clientWidth <= 768 */}
       {nav && clientWidth && (
-        <ul className="absolute top-0 left-0 flex flex-col justify-center items-center gap-10 bg-gradient-to-b from-cyan-950 to-cyan-800 w-full h-screen">
+        <div className="absolute top-0 left-0 flex flex-col justify-center items-center gap-10 bg-gradient-to-b from-cyan-950 to-cyan-800 w-full h-screen">
           {links.map(function (link) {
             return (
-              <li
-                key={link.id}
-                className="text-white cursor-pointer border-b-2 border-transparent hover:border-cyan-500 hover:transition-colors hover:ease-in-out delay-150"
-              >
-                {link.link}
-              </li>
+              <div key={link.id}>
+                <NavLink
+                  to={link.link}
+                  className="text-white cursor-pointer border-b-2 border-transparent hover:border-cyan-500 hover:transition-colors hover:ease-in-out delay-150"
+                >
+                  {link.linkName}
+                </NavLink>
+              </div>
             );
           })}
-        </ul>
+        </div>
       )}
     </div>
   );
