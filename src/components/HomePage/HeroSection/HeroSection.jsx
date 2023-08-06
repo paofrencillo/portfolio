@@ -6,12 +6,12 @@ import ResumeBtn from "./ResumeBtn";
 
 export default function HeroSection() {
   return (
-    <div className="bg-[url('/src/assets/images/patterns.png')] p-14 min-h-[100vh] bg-center flex flex-wrap justify-center items-center gap-10">
-      <div className="mt-10">
+    <div className="py-20 min-h-[100vh] bg-center flex flex-wrap justify-center items-center gap-20 px-[12vw] md:px-[16vw] relative">
+      <div className="">
         <Avatar />
       </div>
       <div>
-        <div className="mt-10">
+        <div className="">
           <Profile />
           <ProfileLinks />
         </div>

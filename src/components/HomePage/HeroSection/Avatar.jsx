@@ -1,8 +1,8 @@
-import avatar from "../../assets/images/pao-avatar.jpg";
+import avatar from "../../../assets/images/pao-avatar.jpg";
 
 export default function Avatar() {
   return (
-    <div className="gradient-border rounded w-60 md:w-72">
+    <div className="gradient-border w-60 md:w-72">
       <img
         src={avatar}
         alt="pao-avatar"

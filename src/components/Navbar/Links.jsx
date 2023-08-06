@@ -5,15 +5,15 @@ export default function Links() {
   const links = [
     {
       id: 1,
-      link: "About",
+      link: "Home",
     },
     {
       id: 2,
-      link: "Skills",
+      link: "About",
     },
     {
       id: 3,
-      link: "Portfolio",
+      link: "Projects",
     },
     {
       id: 4,
@@ -42,9 +42,10 @@ export default function Links() {
           return (
             <li
               key={link.id}
-              className="cursor-pointer border-b-2 border-transparent text-sm hover:border-cyan-500 hover:transition-colors hover:ease-in-out delay-150"
+              className="group cursor-pointer border-transparent text-sm "
             >
               {link.link}
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-cyan-500"></span>
             </li>
           );
         })}
