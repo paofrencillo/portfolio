@@ -1,3 +1,5 @@
+import MoreProjectsBtn from "../../Buttons/MoreProjectsBtn";
+
 export default function FavProjects() {
   const favProjects = [
     {
@@ -42,6 +44,7 @@ export default function FavProjects() {
           </div>
         );
       })}
+      <MoreProjectsBtn />
     </div>
   );
 }

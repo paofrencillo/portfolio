@@ -1,12 +1,17 @@
 import Navbar from "../components/Navbar/Navbar";
-import AboutContents from "../components/AboutPage/AboutContents";
+
+import BioSec from "../components/AboutPage/BioSec/BioSec";
+import SkillsSec from "../components/AboutPage/SkillsSec/SkillsSec";
+import ExpSec from "../components/AboutPage/ExpSec/ExpSec";
 import Footer from "../components/Footer/Footer";
 
 export default function About() {
   return (
     <>
       <Navbar />
-      <AboutContents />
+      <BioSec />
+      <SkillsSec />
+      <ExpSec />
       <Footer />
     </>
   );
