@@ -2,7 +2,7 @@ import SkillsCard from "./SkillsCard";
 
 export default function SkillsSec() {
   return (
-    <div className="my-22 shadow-md">
+    <div className="mb-24 shadow-md">
       <div className="bg-slate-50 w-full shadow-md justify-center items-center py-10 px-[12vw] md:px-[16vw]">
         <h1 className="group w-fit text-cyan-700 text-lg md:text-2xl font-bold">
           Skills
