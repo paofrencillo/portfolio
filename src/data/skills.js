@@ -1,9 +1,20 @@
+import pythonImg from "../assets/images/python.png";
+import jsImg from "../assets/images/js.png";
+import phpImg from "../assets/images/php.png";
+import htmlImg from "../assets/images/html.png";
+import cssImg from "../assets/images/css.png";
+import djangoImg from "../assets/images/django.png";
+import mysqlImg from "../assets/images/mysql.png";
+import bootstrapImg from "../assets/images/bootstrap.png";
+import tailwindImg from "../assets/images/tailwind.png";
+import gitImg from "../assets/images/git.png";
+
 export default function skills() {
   const skillsList = [
     {
       id: 1,
       name: "Python",
-      img: "/src/assets/images/python.png",
+      img: pythonImg,
       expertise: "proficient",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -11,7 +22,7 @@ export default function skills() {
     {
       id: 2,
       name: "JavaScript",
-      img: "/src/assets/images/js.png",
+      img: jsImg,
       expertise: "competent",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -19,7 +30,7 @@ export default function skills() {
     {
       id: 3,
       name: "PHP",
-      img: "/src/assets/images/php.png",
+      img: phpImg,
       expertise: "novice",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -27,7 +38,7 @@ export default function skills() {
     {
       id: 4,
       name: "HTML",
-      img: "/src/assets/images/html.png",
+      img: htmlImg,
       expertise: "expert",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -35,7 +46,7 @@ export default function skills() {
     {
       id: 5,
       name: "CSS",
-      img: "/src/assets/images/css.png",
+      img: cssImg,
       expertise: "competent",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -43,7 +54,7 @@ export default function skills() {
     {
       id: 6,
       name: "Django",
-      img: "/src/assets/images/django.png",
+      img: djangoImg,
       expertise: "proficient",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -51,7 +62,7 @@ export default function skills() {
     {
       id: 7,
       name: "MySQL",
-      img: "/src/assets/images/mysql.png",
+      img: mysqlImg,
       expertise: "competent",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -59,7 +70,7 @@ export default function skills() {
     {
       id: 8,
       name: "Bootstrap",
-      img: "/src/assets/images/bootstrap.png",
+      img: bootstrapImg,
       expertise: "proficient",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -67,7 +78,7 @@ export default function skills() {
     {
       id: 9,
       name: "Tailwind CSS",
-      img: "/src/assets/images/tailwind.png",
+      img: tailwindImg,
       expertise: "advance beginner",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
@@ -75,7 +86,7 @@ export default function skills() {
     {
       id: 10,
       name: "Git",
-      img: "/src/assets/images/git.png",
+      img: gitImg,
       expertise: "competent",
       classDiv:
         "relative bg-white rounded-xl p-4 hover:bg-[gray] hover:transition-colors hover:ease-in-out delay-150 md:text-base",
