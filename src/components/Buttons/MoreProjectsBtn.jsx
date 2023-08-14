@@ -3,9 +3,12 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 export default function MoreProjectsBtn() {
   return (
     <>
-      <button className="text-slate-800 rounded-md shadow-lg py-2 bg-cyan-300 font-bold flex justify-center items-center gap-2 hover:bg-cyan-400 hover:text-slate-100 hover:transition-colors hover:ease-in-out delay-150">
-        View More
-        <FaAngleDoubleRight />
+      <button
+        className="flex gap-2 justify-center items-center w-full select-none rounded-lg bg-cyan-500 py-3 px-6 text-sm font-bold uppercase text-white shadow-md shadow-cyan-500/30 transition-all hover:shadow-lg  hover:bg-cyan-700 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"
+        data-ripple-light="true"
+      >
+        View More <FaAngleDoubleRight />
       </button>
     </>
   );

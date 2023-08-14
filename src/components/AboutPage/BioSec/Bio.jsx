@@ -1,8 +1,21 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ResumeBtn from "../../Buttons/ResumeBtn";
 
 export default function Bio() {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 750,
+      easing: "ease",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="py-10">
+    <div data-aos="fade-left" className="py-12">
       <div className="w-20 h-1 mb-4 bg-yellow-600 rounded"></div>
       <h1 className="text-cyan-700 font-bold text-xl w-fit mb-5 md:text-3xl">
         About Me

@@ -1,6 +1,19 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import experiences from "../../../data/experiences";
 
 export default function ExpCard() {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 750,
+      easing: "ease",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   const expList = experiences();
   return (
     <>
@@ -8,9 +21,10 @@ export default function ExpCard() {
         return (
           <div
             key={exp.id}
+            data-aos="fade-up"
             className="flex flex-col justify-center gap-4 rounded-lg shadow-lg border-2 border-gray-200"
           >
-            <div className="p-5">
+            <div data-aos="fade-left" data-aos-delay="600" className="p-5">
               <h2 className="text-gray-800 font-bold">{exp.title}</h2>
               <h3 className="text-gray-800 font-bold mb-4">{exp.company}</h3>
               <p className="text-justify w-[275px] md:w-full">{exp.desc}</p>
@@ -19,7 +33,11 @@ export default function ExpCard() {
             <div className="grid row-cols-12  md:grid-cols-2 gap-1">
               {exp.img.map((img) => {
                 return (
-                  <div key={img.id} className="h-[150px] w-full md:h-[350px]">
+                  <div
+                    key={img.id}
+                    data-aos="fade-right"
+                    className="h-[150px] w-full md:h-[350px]"
+                  >
                     <img
                       src={img.src}
                       alt={img.alt}

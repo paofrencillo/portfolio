@@ -1,50 +1,63 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import favProjects from "../../../data/favProjects";
 import MoreProjectsBtn from "../../Buttons/MoreProjectsBtn";
+import s1 from "../../../assets/images/sit1.jpg";
 
 export default function FavProjects() {
-  const favProjects = [
-    {
-      id: 1,
-      title: "ValueMed Inventory System",
-      pic: "",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti eius vitae veniam repudiandae at saepe atque sunt nulla consequatur culpa.",
-    },
-    {
-      id: 2,
-      title: "Tool Keeper System",
-      pic: "",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti eius vitae veniam repudiandae at saepe atque sunt nulla consequatur culpa.",
-    },
-    {
-      id: 3,
-      title: "Motion Detector with openCV",
-      pic: "",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti eius vitae veniam repudiandae at saepe atque sunt nulla consequatur culpa.",
-    },
-  ];
+  const favs = favProjects();
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 750,
+      easing: "ease",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-10">
-      {favProjects.map((favProject) => {
+    <div className="flex flex-col gap-14">
+      {favs.map((fav) => {
         return (
           <div
-            key={favProject.id}
-            className="shadow-xl bg-slate-100 w-full rounded-md flex gap-5 p-5"
+            key={fav.id}
+            data-aos="fade-up"
+            className="shadow-2xl border-2 border-slate-200 w-full rounded-md flex flex-wrap gap-10 p-5 lg:flex-nowrap"
           >
-            <div className="w-1/3 bg-gray-800">{favProject.pic}</div>
-            <div className="w-2/3 text-base xl:text-lg">
-              <h3 className="text-yellow-600 font-semibold mb-3">
-                {favProject.title}
-              </h3>
+            <div className="bg-gray-800 rounded-lg w-full md:w-[1000px] md:h-[300px]">
+              <img
+                src={s1}
+                alt={fav.title}
+                className="rounded-lg w-full h-[200px] md:w-[750px] md:h-[300px]"
+              />
+            </div>
+            <div className="text-base xl:text-lg">
+              <h3 className="text-yellow-600 font-bold mb-3">{fav.title}</h3>
               <p className="text-gray-600 text-justify">
-                {favProject.description}
+                {fav.description}&nbsp;
               </p>
+              <div className="flex flex-wrap gap-3 my-3">
+                {fav.tech.map((tech, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs font-medium bg-cyan-100 text-cyan-800"
+                    >
+                      {tech}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         );
       })}
-      <MoreProjectsBtn />
+      <div data-aos="fade-up">
+        <MoreProjectsBtn />
+      </div>
     </div>
   );
 }

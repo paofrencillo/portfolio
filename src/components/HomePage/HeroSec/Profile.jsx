@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Profile() {
   return (
-    <div>
+    <>
       <h5 className="font-semibold md:text-3xl text-gray-500 text-xl">
         Hi there, I&#39;m
       </h5>
@@ -18,6 +18,6 @@ export default function Profile() {
           }}
         />
       </h1>
-    </div>
+    </>
   );
 }

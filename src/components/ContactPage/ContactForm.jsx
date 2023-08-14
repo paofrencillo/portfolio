@@ -2,8 +2,8 @@ import { MdSend } from "react-icons/md";
 
 export default function ContactForm() {
   return (
-    <div className="p-6 flex flex-col rounded-xl bg-transparent text-gray-700 shadow-none">
-      <form className="">
+    <div className="px-0 py-4 md:px-4 flex flex-col rounded-xl bg-transparent text-gray-700 shadow-none">
+      <form>
         <div className="mb-4 flex flex-col gap-6">
           <div className="relative h-11 w-full min-w-[200px]">
             <input

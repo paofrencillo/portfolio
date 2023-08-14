@@ -16,7 +16,7 @@ export default function links() {
     },
     {
       id: 2,
-      link: "https://github.com/paopaolopaoloo",
+      link: "https://github.com/paofrencillo",
       classDiv:
         "rounded-full shadow-xl bg-white text-md border-2 p-3 hover:bg-[#333] hover:transition-colors hover:ease-in-out delay-150",
       icon: <FaGithub />,

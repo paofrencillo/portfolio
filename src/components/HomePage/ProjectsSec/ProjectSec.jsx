@@ -1,11 +1,27 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import FavProjects from "./FavProjects";
 
 export default function ProjectsSec() {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 750,
+      easing: "ease",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="bg-slate-50 shadow-2xl flex flex-wrap justify-between px-[12vw] py-16 mb-24 lg:gap-44 lg:flex-nowrap md:px-[16vw] sm:gap-5">
-      <h1 className="group text-cyan-800 font-bold text-base w-fit xl:text-xl">
+    <div className="py-12 min-h-screen flex flex-col justify-center px-[12vw] md:px-[16vw]">
+      <h1 className="w-fit text-cyan-800 font-extrabold text-xl mb-10 md:text-2xl xl:text-4xl 2xl:text-6xl">
         Projects
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-yellow-500"></span>
+        <span
+          data-aos="fade-right"
+          className="rounded mt-2 block h-1 bg-yellow-500"
+        ></span>
       </h1>
       <FavProjects />
     </div>

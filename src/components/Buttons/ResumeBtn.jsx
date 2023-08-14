@@ -6,8 +6,12 @@ export default function ResumeBtn() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button className="shadow-xl rounded-xl bg-cyan-200 font-medium py-3 px-5 text-xs md:text-base md:font-semibold hover:text-slate-100 hover:bg-cyan-400 hover:transition-colors hover:ease-in-out delay-150">
-          See my CV
+        <button
+          className="flex gap-2 justify-center items-center w-fit select-none rounded-lg bg-white text-gray-700 py-3 px-6 text-sm font-bold uppercase shadow-md shadow-gray-500/30 transition-all hover:shadow-lg hover:text-cyan-700 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+          data-ripple-light="true"
+        >
+          See my Resume
         </button>
       </a>
     </div>
