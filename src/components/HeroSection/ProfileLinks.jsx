@@ -1,4 +1,4 @@
-import links from "../../../data/profileLinks";
+import links from "../../data/profileLinks";
 
 export default function ProfileLinks() {
   const profileLinks = links();

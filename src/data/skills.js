@@ -62,7 +62,7 @@ export default function skills() {
     },
     {
       id: 9,
-      name: "Tailwind CSS",
+      name: "Tailwind",
       img: tailwindImg,
       expertise: "advance beginner",
     },

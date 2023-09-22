@@ -4,10 +4,10 @@ import "aos/dist/aos.css";
 import Avatar from "./Avatar";
 import Profile from "./Profile";
 import ProfileLinks from "./ProfileLinks";
-import ProjectsBtn from "../../Buttons/ProjectsBtn";
-import ResumeBtn from "../../Buttons/ResumeBtn";
+import ProjectsBtn from "../Buttons/ProjectsBtn";
+import ResumeBtn from "../Buttons/ResumeBtn";
 
-export default function HeroSec() {
+export default function HeroSection() {
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -19,7 +19,7 @@ export default function HeroSec() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-wrap justify-center items-center gap-5 md:gap-20 px-[12vw] md:px-[16vw] pt-20 relative">
+    <div className="min-h-screen flex flex-wrap justify-center items-center gap-5 md:gap-20 px-[12vw] md:px-[16vw]">
       <div data-aos="fade-right">
         <Avatar />
       </div>
