@@ -32,38 +32,38 @@ export default function App() {
             <a href="#hero">
               <div
                 id="hero-link"
-                className="hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
+                className="flex flex-col items-center hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
               >
                 <BiHomeAlt2 />
-                <div className="text-xs hidden">Home</div>
+                <div className="text-xs sm:hidden">Home</div>
               </div>
             </a>
             <a href="#about">
               <div
                 id="about-link"
-                className="hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
+                className="flex flex-col items-center hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
               >
                 <IoPersonOutline />
-                <div className="text-xs hidden">About</div>
+                <div className="text-xs sm:hidden">About</div>
               </div>
             </a>
             <a href="#projects">
               <div
                 id="projects-link"
-                className="hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
+                className="flex flex-col items-center hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
               >
                 <LiaProjectDiagramSolid />
-                <div className="text-xs hidden">Projects</div>
+                <div className="text-xs sm:hidden">Projects</div>
               </div>
             </a>
 
             <a href="#contact">
               <div
                 id="contact-link"
-                className="hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
+                className="flex flex-col items-center hover:text-yellow-500 cursor-pointer transition delay-150 duration-300 ease-in-out"
               >
                 <BsTelephone />
-                <div className="text-xs hidden">Contact</div>
+                <div className="text-xs sm:hidden">Contact</div>
               </div>
             </a>
           </div>

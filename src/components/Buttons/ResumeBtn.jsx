@@ -1,6 +1,6 @@
 export default function ResumeBtn() {
   return (
-    <div>
+    <>
       <a
         href="/FRENCILLO-PAOLO-RESUME.pdf"
         target="_blank"
@@ -14,6 +14,6 @@ export default function ResumeBtn() {
           See my Resume
         </button>
       </a>
-    </div>
+    </>
   );
 }
