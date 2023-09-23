@@ -8,7 +8,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <div className="py-14 px-[12vw] md:px-[16vw]">
+    <div className="py-20 px-[12vw] md:px-[14vw]">
       <div
         className="w-16 h-1.5 mb-4 bg-yellow-500 rounded"
         data-aos="fade-down"

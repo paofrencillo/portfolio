@@ -19,7 +19,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-wrap justify-center items-center gap-5 md:gap-20 px-[12vw] md:px-[16vw]">
+    <div className="py-10 flex flex-wrap justify-center items-center gap-5 md:gap-20 px-[12vw] md:px-[14vw]">
       <div data-aos="fade-right">
         <Avatar />
       </div>

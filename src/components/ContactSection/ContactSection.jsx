@@ -10,7 +10,7 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <div className="py-14 px-[12vw] md:px-[16vw]">
+    <div className="py-20 px-[12vw] md:px-[14vw]">
       <h1
         data-aos="fade-down"
         className="text-center text-xl text-gray-100 font-extrabold md:text-3xl"
@@ -23,7 +23,7 @@ export default function ContactSection() {
       >
         Any questions? Just write me a message!
       </h3>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 rounded-md shadow-md ">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 rounded-md shadow-md bg-white ">
         <div data-aos="fade-right">
           <ContactDetails />
         </div>

@@ -3,8 +3,8 @@ import progImg from "../../assets/images/prog.jpg";
 
 export default function ContactDetails() {
   return (
-    <div className="relative w-full rounded-md">
-      <div className="rounded-md w-full h-full bg-gray-900">
+    <div className="relative w-full">
+      <div className="rounded-l-md w-full h-full bg-gray-900">
         <div className="p-6">
           <h4 className="text-white text-2xl font-bold mb-2">
             Contact Information
