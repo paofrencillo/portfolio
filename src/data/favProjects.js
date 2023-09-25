@@ -24,7 +24,6 @@ export default function favProjects() {
       description:
         "A web-based tool tracking system with Raspberry Pi 4 integration for the tool storages.",
       tech: [
-        "Python",
         "Django",
         "Raspberry Pi 4 Model B",
         "JavaScript",
