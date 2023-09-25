@@ -76,9 +76,10 @@ export default function FavProjects() {
           );
         })}
       </div>
-      <div data-aos="fade-up">
+      {/* IF THERE ARE More projects then uncomment this */}
+      {/* <div data-aos="fade-up">
         <MoreProjectsBtn />
-      </div>
+      </div> */}
     </>
   );
 }
