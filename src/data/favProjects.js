@@ -5,6 +5,7 @@ import cvd from "../assets/images/cvd.png";
 import fmd from "../assets/images/fmd.png";
 
 export default function favProjects() {
+  //
   const favProjects = [
     {
       id: 1,
