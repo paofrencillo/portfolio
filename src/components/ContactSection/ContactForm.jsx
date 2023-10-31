@@ -1,12 +1,38 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { MdSend } from "react-icons/md";
 
 export default function ContactForm() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_ID
+      )
+      .then(
+        () => {
+          alert("Email was sent.");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Email was not sent.");
+          console.error(error.response);
+
+          e.target.reset();
+        }
+      );
+  };
   return (
     <div className="px-0 md:px-4 flex flex-col rounded-xl bg-transparent text-gray-800 shadow-none">
-      <form>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="my-4 flex flex-col gap-6">
           <div className="relative h-11 w-full min-w-[200px]">
             <input
+              name="from_name"
               className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-cyan-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" "
             />
@@ -16,6 +42,7 @@ export default function ContactForm() {
           </div>
           <div className="relative h-11 w-full min-w-[200px]">
             <input
+              name="from_email"
               className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-cyan-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" "
             />
@@ -25,6 +52,7 @@ export default function ContactForm() {
           </div>
           <div className="relative w-full min-w-[200px]">
             <textarea
+              name="message"
               className="peer h-full min-h-[150px] w-full resize-none rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-cyan-500 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" "
             ></textarea>
@@ -35,7 +63,7 @@ export default function ContactForm() {
         </div>
         <button
           className="flex gap-2 justify-center items-center w-full select-none rounded-lg bg-cyan-500 py-3 px-6 font-sans text-sm font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg  hover:bg-cyan-600 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-          type="button"
+          type="submit"
           data-ripple-light="true"
         >
           Send Message <MdSend className="" />

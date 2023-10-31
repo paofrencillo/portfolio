@@ -1,3 +1,4 @@
+import tzy from "../assets/images/tzy.png";
 import vis from "../assets/images/vis.png";
 import tks from "../assets/images/tks.png";
 import pw from "../assets/images/pw.png";
@@ -9,6 +10,24 @@ export default function favProjects() {
   const favProjects = [
     {
       id: 1,
+      title: "Taskizy",
+      pic: tzy,
+      description:
+        "Task management system with 'rooms' for exclusive task creation, better for team tasks.",
+      tech: [
+        "Django Rest Framework",
+        "ReactJS",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Material Tailwind",
+      ],
+      githubLink: "https://github.com/paofrencillo/taskizy",
+      demoLink: "https://taskizy.vercel.app",
+    },
+    {
+      id: 2,
       title: "ValueMed Inventory System",
       pic: vis,
       description:
@@ -18,7 +37,7 @@ export default function favProjects() {
       demoLink: "https://vmginventory.000webhostapp.com/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Tool Keeper System",
       pic: tks,
       description:
@@ -36,7 +55,7 @@ export default function favProjects() {
       demoLink: "#",
     },
     {
-      id: 3,
+      id: 4,
       title: "Portfolio Website",
       pic: pw,
       description: "My portfolio website designed in ReactJS and TailwindCSS",
@@ -45,7 +64,7 @@ export default function favProjects() {
       demoLink: "https://paofrencillo-portfolio.vercel.app",
     },
     {
-      id: 4,
+      id: 5,
       title: "COVID VAC Distribution w/ Python",
       pic: cvd,
       description:
@@ -56,7 +75,7 @@ export default function favProjects() {
         "https://drive.google.com/file/d/1YEYlWlteVMMxnid5NXyMKBybapTG5nVo/view",
     },
     {
-      id: 5,
+      id: 6,
       title: "Motion Detector with openCV",
       pic: fmd,
       description:

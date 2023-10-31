@@ -2,7 +2,7 @@ export default function ResumeBtn() {
   return (
     <>
       <a
-        href="/FRENCILLO-PAOLO-RESUME.pdf"
+        href="/Resume_Frencillo_Paolo.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -19,7 +19,6 @@ export default function ProjectsSection() {
       >
         My Projects
       </h1>
-
       <FavProjects />
     </div>
   );
