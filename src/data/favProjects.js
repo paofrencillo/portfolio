@@ -4,6 +4,7 @@ import tks from "../assets/images/tks.png";
 import pw from "../assets/images/pw.png";
 import cvd from "../assets/images/cvd.png";
 import fmd from "../assets/images/fmd.png";
+import rml from "../assets/images/rentme.png";
 
 export default function favProjects() {
   //
@@ -38,6 +39,15 @@ export default function favProjects() {
     },
     {
       id: 3,
+      title: "RentMe Landing Page",
+      pic: rml,
+      description: "RentMe Landing Page for car rental services.",
+      tech: ["JavaScript", "HTML", "CSS", "Sass"],
+      githubLink: "https://github.com/paofrencillo/rentme-landing",
+      demoLink: "https://paofrencillo.github.io/rentme-landing/",
+    },
+    {
+      id: 4,
       title: "Tool Keeper System",
       pic: tks,
       description:
@@ -55,16 +65,16 @@ export default function favProjects() {
       demoLink: "#",
     },
     {
-      id: 4,
+      id: 5,
       title: "Portfolio Website",
       pic: pw,
       description: "My portfolio website designed in ReactJS and TailwindCSS",
       tech: ["ReactJS", "Tailwind CSS", "JavaScript", "Vite"],
       githubLink: "https://github.com/paofrencillo/portfolio",
-      demoLink: "https://paofrencillo-portfolio.vercel.app",
+      demoLink: "https://paofrencillo-portfolio.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "COVID VAC Distribution w/ Python",
       pic: cvd,
       description:
@@ -75,12 +85,20 @@ export default function favProjects() {
         "https://drive.google.com/file/d/1YEYlWlteVMMxnid5NXyMKBybapTG5nVo/view",
     },
     {
-      id: 6,
+      id: 7,
       title: "Motion Detector with openCV",
       pic: fmd,
       description:
         "Simple web app that detects motion on camera using OpenCV technology.",
-      tech: ["Python", "Flask", "JavaScript", "HTML", "CSS", "Bootstrap"],
+      tech: [
+        "OpenCV",
+        "Python",
+        "Flask",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+      ],
       githubLink: "https://github.com/paofrencillo/flask-motion-detector",
       demoLink: "#",
     },
